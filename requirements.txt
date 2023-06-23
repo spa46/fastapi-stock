@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+
+# yfinance
+yahooquery
+
+finance-datareader
+
+fastapi
+pydantic
+SQLAlchemy
+pymysql
+
+httpx
+pytest
