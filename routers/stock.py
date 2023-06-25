@@ -74,7 +74,7 @@ async def update_tickers(index: str = Query('SP500', enum=Index), db: Session = 
 
     # add new tickers
     print(f'update tickers: {new_tickers}')
-    stock_service.add_tickers_into_index(db, new_tickers, _index_id)
+    stock_service.add_tickers_into_index(db, df[df['Symbol'].isin(new_tickers)], _index_id)
 
     # delete in index
     print(f'remove tickers: {old_tickers}')
